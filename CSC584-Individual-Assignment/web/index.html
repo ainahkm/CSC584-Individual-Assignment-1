@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--ni link nk bagi tulisan lagi nampak comel, kt netbean error tapi still ok je x de effect kt mana ii part-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Create My Personal Web Page</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-form">
+
+  <main class="form-wrap">
+    <span class="doodle doodle-star" aria-hidden="true">&#9733;</span> 
+    <span class="doodle doodle-heart" aria-hidden="true">&#9829;</span>
+
+    <header class="form-head">
+      <p class="hand">psst... fill this in</p>
+      <h1>Create Your <span class="mark">Personal Profile</span></h1>
+      <p class="sub">Fill in your details and I will turn it into a profile page.</p>
+    </header>
+
+    <form action="ProfileServlet" method="post" enctype="multipart/form-data" class="card">
+
+      <div class="field">
+        <label for="photo">Profile Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+        <small>JPG or PNG, up to 5 MB.</small>
+      </div>
+
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" name="studentId" placeholder="e.g. 2026123456" required>
+        </div>
+        <div class="field">
+          <label for="programme">Programme</label>
+          <input type="text" id="programme" name="programme" placeholder="e.g. CS110 - Computer Science" required>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@student.uitm.edu.my" required>
+      </div>
+
+      <div class="field">
+        <label for="hobbies">Hobbies</label>
+        <input type="text" id="hobbies" name="hobbies" placeholder="Separate with commas, e.g. reading, drawing, baking" required>
+        <small>Each hobby becomes its own little tag on your profile.</small>
+      </div>
+
+      <div class="field">
+        <label for="introduction">Short Self-Introduction</label>
+        <textarea id="introduction" name="introduction" rows="5" maxlength="600" placeholder="A few sentences about you..." required></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="reset" class="btn btn-ghost">Clear</button>
+        <button type="submit" class="btn btn-main">Create My Profile</button>
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>

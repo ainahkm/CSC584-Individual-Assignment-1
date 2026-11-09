@@ -1,0 +1,294 @@
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Nunito", Arial, sans-serif;
+  color: #4a2f3b;
+  line-height: 1.6;
+  background-color: #ffe3ec;
+  /* gambar polka dot sbb im just a girl*/
+  background-image: radial-gradient(#ffc9da 2px, transparent 3px);
+  background-size: 26px 26px;
+  min-height: 100%;
+}
+
+h1, h2, h3 { font-family: "Fredoka", "Nunito", Arial, sans-serif; margin: 0; }
+
+.hand {
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  color: #d9588a;
+  margin: 0;
+}
+
+/* ni part button*/
+.btn {
+  display: inline-block;
+  font-family: "Fredoka", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 2px solid #4a2f3b;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-main  { background: #f593b4; color: #ffffff; box-shadow: 3px 3px 0 #4a2f3b; }
+.btn-ghost { background: #fffaf3; color: #4a2f3b; box-shadow: 3px 3px 0 #4a2f3b; }
+.btn:hover { background: #d9588a; color: #ffffff; }
+
+/* tuk form page tu*/
+.form-wrap {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 16px 48px 16px;
+}
+
+.form-head { text-align: center; margin-bottom: 24px; }
+.form-head h1 { font-size: 3rem; line-height: 1.1; }
+.form-head .sub { color: #7d5f6c; margin: 8px 0 0 0; }
+.mark {
+  background: #ffc9da;
+  padding: 0 6px;
+  border-radius: 8px;
+}
+
+.card {
+  background: #fffaf3;
+  border: 2px solid #4a2f3b;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 6px 6px 0 #f593b4;
+  transform: rotate(-0.6deg);
+}
+
+.field { margin-bottom: 18px; flex: 1; }
+.row { display: flex; }
+.row .field { margin-right: 16px; }
+.row .field:last-child { margin-right: 0; }
+
+label {
+  display: block;
+  font-family: "Fredoka", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"],
+textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #4a2f3b;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 2px solid #ffc9da;
+  border-radius: 14px;
+  outline: none;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #f593b4;
+  box-shadow: 0 0 0 4px rgba(245, 147, 180, 0.25);
+}
+textarea { resize: vertical; }
+
+input[type="file"]::file-selector-button {
+    background-color: #f593b4;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    margin-right: 12px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+small {
+  display: block;
+  margin-top: 4px;
+  color: #7d5f6c;
+  font-size: 0.85rem;
+}
+
+.actions { text-align: right; margin-top: 22px; }
+.actions .btn { margin-left: 12px; }
+
+.doodle { position: absolute; font-size: 2rem; }
+.doodle-star  { top: 18px; left: 10px; color: #f7c948; transform: rotate(-14deg); }
+.doodle-heart { top: 38px; right: 12px; color: #f593b4; transform: rotate(12deg); }
+
+/* yg ni lak second page yg profile*/
+.sheet {
+  max-width: 920px;
+  margin: 32px auto;
+  padding: 40px 32px;
+  background-color: #fffaf3;
+  border: 2px solid #4a2f3b;
+  border-radius: 26px;
+  box-shadow: 8px 8px 0 #f593b4;
+  /* faint ruled lines like notebook paper */
+ background-image: repeating-linear-gradient(
+    transparent 0, transparent 31px, rgba(245, 147, 180, .18) 32px);
+}
+/* part gambar */
+.hero {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.polaroid {
+  position: relative;
+  margin: 0 40px 0 0;
+  width: 260px;
+  padding: 14px 14px 10px 14px;
+  background: #ffffff;
+  border: 2px solid #4a2f3b;
+  box-shadow: 0 8px 18px rgba(217, 88, 138, 0.25);
+  transform: rotate(-4deg);
+}
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: 228px;
+  object-fit: cover;
+  background: #ffe3ec;
+}
+.no-photo {
+  height: 228px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffe3ec;
+  color: #7d5f6c;
+}
+.polaroid figcaption {
+  text-align: center;
+  padding-top: 6px;
+  font-size: 1.5rem;
+  word-wrap: break-word;
+}
+
+.tape {
+  position: absolute;
+  top: -16px;
+  left: 75px;
+  width: 110px;
+  height: 30px;
+  transform: rotate(3deg);
+  background: rgba(228, 217, 255, 0.85);
+  border-left: 2px dashed rgba(74, 47, 59, 0.25);
+  border-right: 2px dashed rgba(74, 47, 59, 0.25);
+}
+
+.hello { min-width: 0; flex: 1; }
+.big-name {
+  font-size: 4rem;
+  line-height: 1.05;
+  color: #d9588a;
+  text-shadow: 3px 3px 0 #ffe3ec;
+  word-wrap: break-word;
+}
+.tagline {
+  display: inline-block;
+  margin: 13px 0 0 0;
+  padding: 5px 16px;
+  background: #fff1b8;
+  border: 2px solid #4a2f3b;
+  border-radius: 999px;
+  font-weight: 700;
+  transform: rotate(-1.5deg);
+}
+
+.block { margin-bottom: 32px; }
+.pill {
+  display: inline-block;
+  font-size: 1.15rem;
+  padding: 5px 22px;
+  border: 2px solid #4a2f3b;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  box-shadow: 2px 2px 0 #4a2f3b;
+}
+.pill-pink  { background: #ffc9da; transform: rotate(-2deg); }
+.pill-lilac { background: #e4d9ff; transform: rotate(1.5deg); }
+
+.intro {
+  margin: 0;
+  max-width: 640px;
+  font-size: 1.05rem;
+  word-wrap: break-word;
+}
+
+/*ni lak yg Sticky notes */
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 36px -11px;
+}
+.sticky {
+  flex: 1;
+  min-width: 200px;
+  margin: 11px;
+  padding: 19px 18px 22px 18px;
+  border: 2px solid #4a2f3b;
+  box-shadow: 0 8px 18px rgba(217, 88, 138, 0.25);
+}
+.sticky h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.sticky p { margin: 0; font-weight: 700; word-wrap: break-word; }
+.sticky a { color: #4a2f3b; }
+.sticky-yellow { background: #fff1b8; transform: rotate(-2deg); }
+.sticky-blue   { background: #d4ecff; transform: rotate(1.5deg); }
+.sticky-pink   { background: #ffc9da; transform: rotate(-1deg); }
+
+/* ni yg design Hobby */
+.tags { list-style: none; padding: 0; margin: 0; }
+.tag {
+  display: inline-block;
+  margin: 0 12px 12px 0;
+  padding: 6px 22px;
+  border: 2px solid #4a2f3b;
+  border-radius: 12px;
+  font-family: "Fredoka", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.tag-0 { background: #ffc9da; transform: rotate(-2deg); }
+.tag-1 { background: #d6f5e6; transform: rotate(1.5deg); }
+.tag-2 { background: #fff1b8; transform: rotate(-1deg); }
+.tag-3 { background: #d4ecff; transform: rotate(2deg); }
+
+.foot { text-align: center; margin-top: 40px; }
+
+/*part rensponsives */
+@media (max-width: 760px) {
+  .hero { flex-direction: column; text-align: center; }
+  .polaroid { margin: 0 0 32px 0; width: 80%; max-width: 260px; }
+  .tape { left: 50%; margin-left: -55px; }
+  .big-name { font-size: 2.6rem; }
+  .form-head h1 { font-size: 2.2rem; }
+  .sheet { margin: 16px 10px; padding: 32px 18px; }
+  .intro { text-align: left; }
+}
+
+@media (max-width: 520px) {
+  .row { display: block; }
+  .row .field { margin-right: 0; }
+  .card { padding: 20px; transform: none; }
+  .actions { text-align: center; }
+  .actions .btn { display: block; width: 100%; margin: 10px 0 0 0; }
+  .doodle { display: none; }
+}
